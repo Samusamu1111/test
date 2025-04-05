@@ -1,4 +1,58 @@
-body {
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>封印された謎 - 招待状</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">封印された謎</h1>
+    <p class="subtitle">──あなたは、この謎を解く覚悟がありますか？──</p>
+
+    <!-- 第一の謎 -->
+    <div class="section" id="section1">
+      <p class="puzzle-text">
+        第一の謎：<br>
+        <em>「いちばん最初の言葉を思い出せ」</em>
+      </p>
+      <input type="text" id="answer1" placeholder="答えを入力">
+      <button onclick="checkAnswer(1)">答える</button>
+    </div>
+
+    <!-- 第二の謎 -->
+    <div class="section hidden" id="section2">
+      <p class="puzzle-text">
+        第二の謎：<br>
+        <em>「時計は何も語らない。ただ、真実だけを刻む。」</em>
+      </p>
+      <input type="text" id="answer2" placeholder="答えを入力">
+      <button onclick="checkAnswer(2)">答える</button>
+    </div>
+
+    <!-- 第三の謎 -->
+    <div class="section hidden" id="section3">
+      <p class="puzzle-text">
+        第三の謎：<br>
+        <em>「沈黙する部屋で、唯一音を鳴らすものは？」</em>
+      </p>
+      <input type="text" id="answer3" placeholder="答えを入力">
+      <button onclick="checkAnswer(3)">答える</button>
+    </div>
+
+    <!-- 完了メッセージ -->
+    <div class="section hidden" id="completed">
+      <h2>全ての謎を解き明かした…！</h2>
+      <p>次の指示は、封筒の中にある。</p>
+    </div>
+  </div>
+
+  <!-- 効果音 -->
+  <audio id="se" src="https://soundeffect-lab.info/sound/voice/mp3/decision18.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>body {
   background-color: #0b0c10;
   color: #eeeeee;
   font-family: "Georgia", serif;
