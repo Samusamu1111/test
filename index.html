@@ -1,38 +1,73 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>サムランジェロの自己紹介</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1 class="title">こんにちは、サムランジェロです！</h1>
+body {
+  background-color: #0b0c10;
+  color: #eeeeee;
+  font-family: "Georgia", serif;
+  margin: 0;
+  padding: 40px;
+}
 
-  <p class="intro">
-    はじめまして！サムランジェロといいます。<br>
-    現在はバンコクに住んでいて、プログラミングを勉強しています。
-  </p>
+.container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #1f1f1f;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
 
-  <h2>趣味</h2>
-  <ul class="list">
-    <li>映画鑑賞</li>
-    <li>ゲーム</li>
-    <li>読書</li>
-  </ul>
+.title {
+  font-size: 36px;
+  text-align: center;
+  color: #ffcc00;
+  letter-spacing: 2px;
+}
 
-  <h2>好きな食べ物</h2>
-  <ol class="list">
-    <li>ラーメン</li>
-    <li>お寿司</li>
-    <li>チョコレート</li>
-  </ol>
+.subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 40px;
+  color: #bbbbbb;
+}
 
-  <h2>プロフィール画像</h2>
-  <img src="https://play-lh.googleusercontent.com/LV-RT68NMSt_9Vm2nO-7Q0yFM2zxp9DxCfqBj8RIM3sK2LaPkoN9de9tU3cZzHDIegr7" alt="プロフィール画像" class="profile-img">
+.section {
+  margin-top: 30px;
+}
 
-  <h2>おすすめのサイト</h2>
-  <p>
-    <a href="https://www.google.com" target="_blank" class="link">Googleはこちら</a>
-  </p>
-</body>
-</html>
+.puzzle-text {
+  background-color: #141414;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+.hidden {
+  display: none;
+}
