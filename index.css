@@ -1,42 +1,31 @@
-body {
-  background-color: #f0f8ff;
-  font-family: "Arial", sans-serif;
-  color: #333;
-  margin: 20px;
+const se = document.getElementById("se");
+
+// 謎とその答え（小文字で判定）
+const answers = {
+  1: "こんにちは",
+  2: "時間",
+  3: "時計"
+};
+
+function checkAnswer(n) {
+  const input = document.getElementById(`answer${n}`);
+  const userAnswer = input.value.trim().toLowerCase();
+
+  if (userAnswer === answers[n]) {
+    playSE();
+    document.getElementById(`section${n}`).classList.add("hidden");
+    const nextSection = document.getElementById(`section${n + 1}`);
+    if (nextSection) {
+      nextSection.classList.remove("hidden");
+    } else {
+      document.getElementById("completed").classList.remove("hidden");
+    }
+  } else {
+    alert("それは違うようだ…");
+  }
 }
 
-.title {
-  color: #1e90ff;
-  text-align: center;
-}
-
-.intro {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.list {
-  background-color: #ffffff;
-  padding: 10px 20px;
-  border-left: 5px solid #1e90ff;
-  border-radius: 8px;
-}
-
-.profile-img {
-  border-radius: 50%;
-  border: 3px solid #1e90ff;
-  width: 150px;
-  height: 150px;
-}
-
-.link {
-  color: #ffffff;
-  background-color: #1e90ff;
-  padding: 8px 12px;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.link:hover {
-  background-color: #104e8b;
+function playSE() {
+  se.currentTime = 0;
+  se.play();
 }
